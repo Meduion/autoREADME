@@ -1,6 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
+const markdown = require('./utils/generateMarkdown')
 
 console.log(`\nHello, welcome to autoREADME, an automatic README generator. Please follow the prompts to create your README!\n`)
 // TODO: Create an array of questions for user input
@@ -127,7 +128,11 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, (error) =>
+        error ? console.error(error) : console.log(`Writing README!`) 
+    );
+}
 
 // TODO: Create a function to initialize app
 function init() {
@@ -136,6 +141,7 @@ function init() {
         .then((response) => {
         console.log(response);
         console.log(`Your README file is being generated.`)
+        writeToFile(`README.md`, markdown(response));
     });
 }
 

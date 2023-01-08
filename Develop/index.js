@@ -35,14 +35,8 @@ const questions = [
       {
         type: 'confirm',
         name: 'includeContents',
-        message: 'Does your project require a table of contents?',
-        default: false,
-      },
-      {
-        type: 'input',
-        name: 'contents',
-        message: 'Please list the table of Contents for your project.',
-        when: (response) => response.includeContents
+        message: 'Do you wish to include a table of contents in your README?',
+        default: true,
       },
       {
         type: 'confirm',
@@ -140,7 +134,6 @@ function init() {
         .prompt(questions)
         .then((response) => {
         console.log(response);
-        console.log(`Your README file is being generated.`)
         writeToFile(`README.md`, markdown(response));
     });
 }

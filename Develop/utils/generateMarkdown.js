@@ -48,15 +48,45 @@ function renderLicenseBadge(license) {
   }
 }
 
+function includeContents(includeContents) {
+  let contents = `## Contents`;
+  if (includeContents === false) {
+    contents = ``;
+  }
+  return contents;
+}
 
+function includeInstallation(includeInstallation) {
+  let installation = `## Installation`;
+  if (includeInstallation === false) {
+    installation = ``;
+  }
+  return installation;
+}
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {}
+function includeContributions(includeContributions) {
+  let contributions = `## Contributions`;
+  if (includeContributions === false) {
+    contributions = ``;
+  }
+  return contributions;
+}
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) {}
+function includeTests(includeTests) {
+  let tests = `## Tests`;
+  if (includeTests === false) {
+    tests = ``;
+  }
+  return tests;
+}
+
+function includeQuestions(includeQuestions) {
+  let questions = `## Questions`;
+if (includeQuestions === false) {
+    questions = ``;
+  }
+  return questions;
+}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
@@ -64,7 +94,39 @@ function generateMarkdown(data) {
 
   ${renderLicenseBadge(data.license)}
 
-  
+  ## Description
+
+  ${data.description}
+
+  ${includeContents(data.includeContents)}
+
+  ${includeInstallation(data.includeInstallation)}
+
+  ${data.installation}
+
+  ## Useage
+
+  ${data.useage}
+
+  ## License
+
+  This project is licensed under ${data.license}. For more information (if applicable), please click the following button to learn more:
+
+  ${renderLicenseBadge(data.license)}
+
+  ${includeContributions(data.includeContributions)}
+
+  ${data.contributions}
+
+  ${includeTests(data.includeTests)}
+
+  ${data.tests}
+
+  ${includeQuestions(data.includeQuestions)}
+
+  https://github.com/${data.username}
+
+  ${data.email}
 `;
 }
 

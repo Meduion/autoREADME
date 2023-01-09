@@ -39,6 +39,19 @@ const questions = [
         default: true,
       },
       {
+        type: 'input',
+        name: 'usage',
+        message: 'Please provide usage instructions for your project. (Required)',
+        validate(value) {
+            if (value) {
+                return true;
+            } else {
+                console.log('\nPlease enter usage instructions for your project.');
+                return false;
+            }
+        }
+      },
+      {
         type: 'confirm',
         name: 'includeInstallation',
         message: 'Does your project require an installation guide?',
@@ -49,19 +62,6 @@ const questions = [
         name: 'installation',
         message: 'Please provide a guide to installing your project.',
         when: (response) => response.includeInstallation
-      },
-      {
-        type: 'input',
-        name: 'useage',
-        message: 'Please provide useage instructions for your project. (Required)',
-        validate(value) {
-            if (value) {
-                return true;
-            } else {
-                console.log('\nPlease enter useage instructions for your project.');
-                return false;
-            }
-        }
       },
       {
         type: 'list',

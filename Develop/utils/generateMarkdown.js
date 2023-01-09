@@ -48,10 +48,34 @@ function renderLicenseBadge(license) {
   }
 }
 
-function includeContents(includeContents) {
-  let contents = `## Contents`;
+function includeContents(includeContents, includeInstallation, includeContributions, includeTests, includeQuestions) {
+  let contents = 
+  `## Contents
+  
+  - [Usage](#usage)`;
   if (includeContents === false) {
     contents = ``;
+    return contents;
+  }
+  if (includeInstallation) {
+    contents += 
+  `
+  - [Installation](#installation)`
+  }
+  if (includeContributions) {
+    contents += 
+  `
+  - [Contributions](#contributions)`
+  }
+  if (includeTests) {
+    contents += 
+  `
+  - [Tests](#tests)`
+  }
+  if (includeQuestions) {
+    contents += 
+  `
+  - [Questions](#questions)`
   }
   return contents;
 }
@@ -98,15 +122,15 @@ function generateMarkdown(data) {
 
   ${data.description}
 
-  ${includeContents(data.includeContents)}
+  ${includeContents(data.includeContents, data.includeInstallation, data.includeContributions, data.includeTests, data.includeQuestions)}
+
+  ## Usage
+
+  ${data.usage}
 
   ${includeInstallation(data.includeInstallation)}
 
   ${data.installation}
-
-  ## Useage
-
-  ${data.useage}
 
   ## License
 

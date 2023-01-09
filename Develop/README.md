@@ -1,34 +1,40 @@
 # autoREADME
 
-  [![License: CC0-1.0](https://licensebuttons.net/l/zero/1.0/80x15.png)](http://creativecommons.org/publicdomain/zero/1.0/)
+  [![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 
   ## Description
 
-  thitlkadsflkjkl fjkldajfkdlajfkld;as fjdakljfdsakl;jfdas
+  An automatic readme generator.
 
   ## Contents
+  
+  - [Usage](#usage)
+  - [Installation](#installation)
+  - [Contributions](#contributions)
+  - [Tests](#tests)
+  - [Questions](#questions)
+
+  ## Usage
+
+  Follow the prompts to decide which sections to include and then fill in a description for the section.
 
   ## Installation
 
-  jkljklfadfd jklfdajkfldajs eiouraweiorue ruioeuraio hlkfjsalkfdjal yuoiuioluiluilul uioufiaoe
-
-  ## Useage
-
-  jfkdl jkldjalfkjdl fjdklajfdlk ejkwlajeklr jklerajlk jkllfdajk jkfdlaj jkladfjfdksl jklfdajldk
+  Not really anything
 
   ## License
 
-  This project is licensed under Creative Commons Zero v1.0 Universal. For more information (if applicable), please click the following button to learn more:
+  This project is licensed under BSD 3-Clause. For more information (if applicable), please click the following button to learn more:
 
-  [![License: CC0-1.0](https://licensebuttons.net/l/zero/1.0/80x15.png)](http://creativecommons.org/publicdomain/zero/1.0/)
+  [![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 
   ## Contributions
 
-  fjkldajf jklfadsjkl fdjakl jfkdla fdakl fjdkl
+  Please include credits for original work.
 
   ## Tests
 
-  jfdkla jfdkla fjadkl fjadkl fjdakl fjdakl
+  There aren't any tests yet.
 
   ## Questions
 

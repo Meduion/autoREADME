@@ -18,7 +18,7 @@
 
   autoREADME will provide the user a series of prompts to answer about how they wish to structure their README and what information they would like to provide. Simply   follow the prompts to create your README!
   
-  ![Image of autoREADME README genreator](./utils/images/autoREADME.jpg)
+  ![Image of autoREADME README genreator](./Develop/utils/images/autoREADME.jpg)
 
   ## Installation
   

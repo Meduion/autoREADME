@@ -114,7 +114,6 @@ function includeTests(includeTests, test) {
 }
 
 function includeQuestions(includeQuestions, username, email) {
-  const data = includeQuestions
   const user = username
   const mail = email
   let questions = `## Questions

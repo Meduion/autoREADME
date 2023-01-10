@@ -49,8 +49,8 @@ function renderLicenseBadge(license) {
 }
 
 function includeContents(includeContents, includeInstallation, includeContributions, includeTests, includeQuestions) {
-  let contents = 
-  `## Contents
+  let contents =
+    `## Contents
   
   - [Usage](#usage)`;
   if (includeContents === false) {
@@ -58,55 +58,74 @@ function includeContents(includeContents, includeInstallation, includeContributi
     return contents;
   }
   if (includeInstallation) {
-    contents += 
-  `
+    contents +=
+      `
   - [Installation](#installation)`
   }
   if (includeContributions) {
-    contents += 
-  `
+    contents +=
+      `
   - [Contributions](#contributions)`
   }
   if (includeTests) {
-    contents += 
-  `
+    contents +=
+      `
   - [Tests](#tests)`
   }
   if (includeQuestions) {
-    contents += 
-  `
+    contents +=
+      `
   - [Questions](#questions)`
   }
   return contents;
 }
 
-function includeInstallation(includeInstallation) {
-  let installation = `## Installation`;
+function includeInstallation(includeInstallation, install) {
+  const installInfo = install
+  let installation = `## Installation
+  
+  ${installInfo}`;
   if (includeInstallation === false) {
     installation = ``;
   }
   return installation;
 }
 
-function includeContributions(includeContributions) {
-  let contributions = `## Contributions`;
+function includeContributions(includeContributions, contribute) {
+  const contributeInfo = contribute
+  let contributions = `## Contributions
+  
+  ${contributeInfo}`;
   if (includeContributions === false) {
     contributions = ``;
   }
   return contributions;
 }
 
-function includeTests(includeTests) {
-  let tests = `## Tests`;
+function includeTests(includeTests, test) {
+  const testInfo = test
+  let tests = `## Tests
+  
+  ${testInfo}`;
   if (includeTests === false) {
     tests = ``;
   }
   return tests;
 }
 
-function includeQuestions(includeQuestions) {
-  let questions = `## Questions`;
-if (includeQuestions === false) {
+function includeQuestions(includeQuestions, username, email) {
+  const data = includeQuestions
+  const user = username
+  const mail = email
+  let questions = `## Questions
+  
+  For any questions or comments please reach out to me through github or via email.
+  
+  https://github.com/${user}
+
+  ${mail}
+  `;
+  if (includeQuestions === false) {
     questions = ``;
   }
   return questions;
@@ -128,9 +147,7 @@ function generateMarkdown(data) {
 
   ${data.usage}
 
-  ${includeInstallation(data.includeInstallation)}
-
-  ${data.installation}
+  ${includeInstallation(data.includeInstallation, data.installation)}
 
   ## License
 
@@ -138,22 +155,12 @@ function generateMarkdown(data) {
 
   ${renderLicenseBadge(data.license)}
 
-  ${includeContributions(data.includeContributions)}
+  ${includeContributions(data.includeContributions, data.contributions)}
 
-  ${data.contributions}
+  ${includeTests(data.includeTests, data.tests)}
 
-  ${includeTests(data.includeTests)}
-
-  ${data.tests}
-
-  ${includeQuestions(data.includeQuestions)}
-
-  https://github.com/${data.username}
-
-  ${data.email}
+  ${includeQuestions(data.includeQuestions, data.username, data.email)}
 `;
 }
-
-
 
 module.exports = generateMarkdown;

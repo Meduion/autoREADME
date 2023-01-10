@@ -4,7 +4,7 @@
 
   ## Description
 
-  An automatic readme generator.
+  Description
 
   ## Contents
   
@@ -16,11 +16,11 @@
 
   ## Usage
 
-  Follow the prompts to decide which sections to include and then fill in a description for the section.
+  Use instructions
 
   ## Installation
-
-  Not really anything
+  
+  Install instructions
 
   ## License
 
@@ -29,15 +29,18 @@
   [![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 
   ## Contributions
-
-  Please include credits for original work.
+  
+  Contribute!
 
   ## Tests
-
-  There aren't any tests yet.
+  
+  tests
 
   ## Questions
-
+  
+  For any questions or comments please reach out to me through github or via email.
+  
   https://github.com/Meduion
 
   me@me.com
+  
